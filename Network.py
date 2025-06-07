@@ -23,7 +23,7 @@ class NeuralNetwork:
 
                 for layer in reversed(self.network):
                     gradient = layer.backward(gradient, learning_rate)
-        
+
             error /= len(x_train)
             if verbose:
                 print(f"Epoch {e+1}/{epochs}: error = {error}")
